@@ -14,6 +14,10 @@ $ node src/main.js arn:aws:iam::[ Some AWS Account ID ]:role/[ some role that ex
 
 Then, `source ./name-of-bash-script-youre-running-now.sh` in the environment where you want to set your newly acquired, temporary credentials.
 
+If all goes well, `claudia create ...` will create resources in the account that belongs to `[ Some AWS Account ID ]`.
+
+If you start getting expired-token errors, clear your environment variables and run `src/main.js` again.
+
    [1]: https://claudiajs.com/
    [2]: https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
    
