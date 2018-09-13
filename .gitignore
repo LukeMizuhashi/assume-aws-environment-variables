@@ -1,0 +1,7 @@
+sysops/nginx/log/*.log
+sysops/nginx/nginx.pid
+sysops/npm/log/
+node_modules/
+dist/
+*.swp
+server.log
