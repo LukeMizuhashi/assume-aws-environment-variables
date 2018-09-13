@@ -4,7 +4,7 @@ Sets a few of the AWS environment variables listed [here][2] with credentials fr
 
 To use it, make sure you have a `~/.aws/credentials` or `~/.aws/config` file on your local machine with your user's credentials in it, download this repo, `npm install` it, and run the following from the repo root:
 
-``
+``bash
 node src/main.js arn:aws:iam::[ Some AWS Account ID ]:role/[ some role that exists in that account ] > name-of-bash-script-youll-run-later.sh
 ``
 
