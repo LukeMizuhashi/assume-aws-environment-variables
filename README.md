@@ -12,6 +12,6 @@ node src/main.js arn:aws:iam::[ Some AWS Account ID ]:role/[ some role that exis
 
 `[ some role that exists in that account ]` is the role that you will assume in that account.
 
-   [1] https://claudiajs.com/
-   [2] https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
+   [1]: https://claudiajs.com/
+   [2]: https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
    
