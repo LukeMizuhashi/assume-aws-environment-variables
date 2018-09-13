@@ -4,13 +4,15 @@ Sets a few of the AWS environment variables listed [here][2] with credentials fr
 
 To use it, make sure you have a `~/.aws/credentials` or `~/.aws/config` file on your local machine with your user's credentials in it, download this repo, `npm install` it, and run the following from the repo root:
 
-``bash
-node src/main.js arn:aws:iam::[ Some AWS Account ID ]:role/[ some role that exists in that account ] > name-of-bash-script-youll-run-later.sh
-``
+```bash
+$ node src/main.js arn:aws:iam::[ Some AWS Account ID ]:role/[ some role that exists in that account ] > name-of-bash-script-youll-run-later.sh
+```
 
 `[ Some AWS Account ID ]` is the AWS Account ID of the account in which you want to work. ( vis. If you're using Claudia to create an AWS Gateway API, this is the AWS Account ID of the account in which that Gateway API will be created. )
 
 `[ some role that exists in that account ]` is the role that you will assume in that account.
+
+Then, `source ./name-of-bash-script-youll-run-later-err-okay-now.sh` in the environment where you want to set your newly acquired, temporary credentials.
 
    [1]: https://claudiajs.com/
    [2]: https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
