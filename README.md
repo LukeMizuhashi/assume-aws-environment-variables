@@ -1,6 +1,6 @@
 # assume-aws-environment-variables
 
-Sets a few of the AWS environment variables listed (here)[2] with credentials from an assumed role. Useful when you need to use (Claudia.js)[1] to administer AWS resources via a role assumed in one account by a user in an other account.
+Sets a few of the AWS environment variables listed [here][2] with credentials from an assumed role. Useful when you need to use [Claudia.js][1] to administer AWS resources via a role assumed in one account by a user in an other account.
 
 To use it, make sure you have a `~/.aws/credentials` or `~/.aws/config` file on your local machine with your user's credentials in it, download this repo, `npm install` it, and run the following from the repo root:
 
