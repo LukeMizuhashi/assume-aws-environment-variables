@@ -10,19 +10,29 @@ const params = {
   RoleSessionName: roleSessionName,
 };
 
-execSync("unset AWS_ACCESS_KEY_ID");
-execSync("unset AWS_SECRET_ACCESS_KEY");
-execSync("unset AWS_SESSION_TOKEN");
+const unsetAwsAccessKeyId = "unset AWS_ACCESS_KEY_ID";
+const unsetAwsSecretAccessKey = "unset AWS_SECRET_ACCESS_KEY";
+const unsetAwsSessionToken = "unset AWS_SESSION_TOKEN";
+
+execSync(unsetAwsAccessKeyId);
+execSync(unsetAwsSecretAccessKey);
+execSync(unsetAwsSessionToken);
+
+console.log(
+  [
+    '#!/bin/bash',
+    unsetAwsAccessKeyId,
+    unsetAwsSecretAccessKey,
+    unsetAwsSessionToken,
+    '',
+  ].join(EOL)
+);
 
 const sts = new AWS.STS();
 sts.assumeRole(params).promise()
   .then((response) => {
     console.log(
       [
-        '#!/bin/bash',
-        "unset AWS_ACCESS_KEY_ID;",
-        "unset AWS_SECRET_ACCESS_KEY;",
-        "unset AWS_SESSION_TOKEN;",
         `export AWS_SECRET_ACCESS_KEY=${response.Credentials.SecretAccessKey};`,
         `export AWS_ACCESS_KEY_ID=${response.Credentials.AccessKeyId};`,
         `export AWS_SESSION_TOKEN=${response.Credentials.SessionToken};`,
