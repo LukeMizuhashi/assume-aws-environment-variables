@@ -1,6 +1,6 @@
 {
   "name": "assume-aws-environment-variables",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Sets AWS environment variables with credentials from an assumed role. Useful for use with Claudia.js",
   "main": "src/main.js",
   "scripts": {
