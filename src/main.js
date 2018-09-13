@@ -25,6 +25,7 @@ sts.assumeRole(params).promise()
   .then((response) => {
     console.log(
       [
+        '#!/bin/bash',
         `export AWS_SECRET_ACCESS_KEY=${response.Credentials.SecretAccessKey};`,
         `export AWS_ACCESS_KEY_ID=${response.Credentials.AccessKeyId};`,
         `export AWS_SESSION_TOKEN=${response.Credentials.SessionToken};`,
